@@ -125,80 +125,74 @@ button {
 
 const songs = [
 
-{
-    name: "Spring Day",
-    url: "https://open.spotify.com/track/2j1fFjWHCI9KJSwcuYAOyF"
-},
+    /* 💜 ARIRANG */
 
-{
-    name: "Mikrokosmos",
-    url: "https://open.spotify.com/track/5hnbE5BF2e8BCk9OMR1UVC"
-},
+    { name: "Body to Body" },
+    { name: "Hooligan" },
+    { name: "Aliens" },
+    { name: "FYA" },
+    { name: "2.0" },
+    { name: "No. 29" },
+    { name: "SWIM" },
+    { name: "Merry Go Round" },
+    { name: "NORMAL" },
+    { name: "Like Animals" },
+    { name: "they don't know 'bout us" },
+    { name: "One More Night" },
+    { name: "Please" },
+    { name: "Into the Sun" },
 
-{
-    name: "Magic Shop",
-    url: "https://open.spotify.com/track/64oIxP0B4wZi4cZsCWo5sD"
-},
+    /* 🌙 BTS — diferentes eras */
 
-{
-    name: "Answer : Love Myself",
-    url: "https://open.spotify.com/track/4eVkn18rN4GguUWOsR6Use"
-},
-
-{
-    name: "Euphoria",
-    url: "https://open.spotify.com/track/5YMXGBD6vcYP7IolemyLtK"
-},
-
-{
-    name: "Dynamite",
-    url: "https://open.spotify.com/track/0t1kP63rueHleOhQkYSXFY"
-},
-
-{
-    name: "Butter",
-    url: "https://open.spotify.com/track/2bgTY4UwhfBYhGT4HUYStN"
-},
-
-{
-    name: "FAKE LOVE",
-    url: "https://open.spotify.com/track/6a0gRYXKK0YU69cXaB2RrK"
-},
-
-{
-    name: "I NEED U",
-    url: "https://open.spotify.com/track/3wQnyXNFXNUEOBt1pb4urq"
-},
-
-{
-    name: "Dope",
-    url: "https://open.spotify.com/track/4TiKZrN7gtc62SUiufpFCM"
-},
-
-{
-    name: "Save ME",
-    url: "https://open.spotify.com/track/0RB00aMsmBlr91i9r4Sfib"
-},
-
-{
-    name: "IDOL",
-    url: "https://open.spotify.com/track/2AIWoHr9DF6y4KALCBKWQS"
-},
-
-{
-    name: "Yet To Come",
-    url: "https://open.spotify.com/track/10SRMwb9EuVS1K9rYsBfHQ"
-},
-
-{
-    name: "Run BTS",
-    url: "https://open.spotify.com/track/69xohKu8C1fsflYAiSNbwM"
-},
-
-{
-    name: "ON",
-    url: "https://open.spotify.com/track/4JWbH50WabthGhmtduR8b9"
-}
+    { name: "Spring Day" },
+    { name: "Magic Shop" },
+    { name: "Mikrokosmos" },
+    { name: "Euphoria" },
+    { name: "Answer : Love Myself" },
+    { name: "Life Goes On" },
+    { name: "The Truth Untold" },
+    { name: "Blue & Grey" },
+    { name: "We Are Bulletproof : the Eternal" },
+    { name: "00:00 (Zero O'Clock)" },
+    { name: "Friends" },
+    { name: "Filter" },
+    { name: "Dynamite" },
+    { name: "Butter" },
+    { name: "Yet To Come" },
+    { name: "Run BTS" },
+    { name: "FAKE LOVE" },
+    { name: "IDOL" },
+    { name: "DNA" },
+    { name: "MIC Drop" },
+    { name: "Not Today" },
+    { name: "Dope" },
+    { name: "Save ME" },
+    { name: "I NEED U" },
+    { name: "Blood Sweat & Tears" },
+    { name: "Burning Up (Fire)" },
+    { name: "ON" },
+    { name: "Black Swan" },
+    { name: "Boy With Luv" },
+    { name: "Home" },
+    { name: "Make It Right" },
+    { name: "Pied Piper" },
+    { name: "Go Go" },
+    { name: "Best Of Me" },
+    { name: "Run" },
+    { name: "Young Forever" },
+    { name: "Whalien 52" },
+    { name: "2! 3!" },
+    { name: "For Youth" },
+    { name: "Take Two" },
+    { name: "Crystal Snow" },
+    { name: "Butterfly" },
+    { name: "Paradise" },
+    { name: "Heartbeat" },
+    { name: "Serendipity" },
+    { name: "Dimple" },
+    { name: "Telepathy" },
+    { name: "Dis-ease" },
+    { name: "Stay" }
 
 ];
 
@@ -216,7 +210,11 @@ function chooseSong() {
 
 function openSong() {
 
-    window.location.href = selectedSong.url;
+    const search =
+        "https://open.spotify.com/search/" +
+        encodeURIComponent(selectedSong.name + " BTS");
+
+    window.location.href = search;
 
 }
 

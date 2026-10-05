@@ -390,11 +390,17 @@ const songs = [
 
 let selectedSong;
 
-function chooseSong() {
+let lastSongName = "";
 
-    let index = Math.floor(Math.random() * songs.length);
+function chooseSong() {
+    let index;
+
+    do {
+        index = Math.floor(Math.random() * songs.length);
+    } while (songs.length > 1 && songs[index].name === lastSongName);
 
     selectedSong = songs[index];
+    lastSongName = selectedSong.name;
 
     document.getElementById("song").textContent =
         "“" + selectedSong.name + "”";

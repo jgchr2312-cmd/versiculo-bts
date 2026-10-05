@@ -185,7 +185,10 @@ const songs = [
     { name: "For Youth" },
     { name: "Take Two" },
     { name: "Crystal Snow" },
-    { name: "Butterfly" },
+    { 
+    name: "Butterfly",
+    url: "https://open.spotify.com/track/1GxGLSKW0HxYkvUJH8OVRd"
+},
     { name: "Paradise" },
     { name: "Heartbeat" },
     { name: "Serendipity" },
@@ -210,11 +213,15 @@ function chooseSong() {
 
 function openSong() {
 
-    const search =
-        "https://open.spotify.com/search/" +
-        encodeURIComponent(selectedSong.name + " BTS");
+    if (selectedSong.url) {
+        window.location.href = selectedSong.url;
+    } else {
+        const search =
+            "https://open.spotify.com/search/" +
+            encodeURIComponent(selectedSong.name + " BTS");
 
-    window.location.href = search;
+        window.location.href = search;
+    }
 
 }
 

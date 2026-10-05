@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Una canción para ti ♡</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #666666;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #222222;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+    background: #eeeeee;
+    padding: 42px 28px;
+    text-align: center;
+    border-top: 7px solid #e9002b;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.heart {
+    color: #e9002b;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin: 12px 0 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #666666;
+}
+
+.song {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: bold;
+    margin: 20px 5px 8px;
+}
+
+.artist {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #e9002b;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    background: #e9002b;
+    color: white;
+    padding: 13px 22px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.footer {
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #888888;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">♡</div>
+
+    <h1>Una canción para ti</h1>
+
+    <div class="subtitle">
+        Quizás necesitabas escuchar esto hoy...
+    </div>
+
+    <div class="song" id="song">
+        ♫
+    </div>
+
+    <div class="artist">
+        BTS
+    </div>
+
+    <button onclick="openSong()">
+        💜 ESCUCHAR EN SPOTIFY
+    </button>
+
+    <div class="footer">
+        Que esta canción te encuentre cuando la necesites. ♡
+    </div>
+
+</div>
+
+<script>
+
+const songs = [
+
+{
+    name: "Spring Day",
+    url: "https://open.spotify.com/track/2j1fFjWHCI9KJSwcuYAOyF"
+},
+
+{
+    name: "Mikrokosmos",
+    url: "https://open.spotify.com/track/5hnbE5BF2e8BCk9OMR1UVC"
+},
+
+{
+    name: "Magic Shop",
+    url: "https://open.spotify.com/track/64oIxP0B4wZi4cZsCWo5sD"
+},
+
+{
+    name: "Answer : Love Myself",
+    url: "https://open.spotify.com/track/4eVkn18rN4GguUWOsR6Use"
+},
+
+{
+    name: "Euphoria",
+    url: "https://open.spotify.com/track/5YMXGBD6vcYP7IolemyLtK"
+},
+
+{
+    name: "Dynamite",
+    url: "https://open.spotify.com/track/0t1kP63rueHleOhQkYSXFY"
+},
+
+{
+    name: "Butter",
+    url: "https://open.spotify.com/track/2bgTY4UwhfBYhGT4HUYStN"
+},
+
+{
+    name: "FAKE LOVE",
+    url: "https://open.spotify.com/track/6a0gRYXKK0YU69cXaB2RrK"
+},
+
+{
+    name: "I NEED U",
+    url: "https://open.spotify.com/track/3wQnyXNFXNUEOBt1pb4urq"
+},
+
+{
+    name: "Dope",
+    url: "https://open.spotify.com/track/4TiKZrN7gtc62SUiufpFCM"
+},
+
+{
+    name: "Save ME",
+    url: "https://open.spotify.com/track/0RB00aMsmBlr91i9r4Sfib"
+},
+
+{
+    name: "IDOL",
+    url: "https://open.spotify.com/track/2AIWoHr9DF6y4KALCBKWQS"
+},
+
+{
+    name: "Yet To Come",
+    url: "https://open.spotify.com/track/10SRMwb9EuVS1K9rYsBfHQ"
+},
+
+{
+    name: "Run BTS",
+    url: "https://open.spotify.com/track/69xohKu8C1fsflYAiSNbwM"
+},
+
+{
+    name: "ON",
+    url: "https://open.spotify.com/track/4JWbH50WabthGhmtduR8b9"
+}
+
+];
+
+let selectedSong;
+
+function chooseSong() {
+
+    let index = Math.floor(Math.random() * songs.length);
+
+    selectedSong = songs[index];
+
+    document.getElementById("song").textContent =
+        "“" + selectedSong.name + "”";
+}
+
+function openSong() {
+
+    window.location.href = selectedSong.url;
+
+}
+
+chooseSong();
+
+</script>
+
+</body>
+</html>
